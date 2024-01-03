@@ -34,11 +34,12 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import com.google.accompanist.systemuicontroller.SystemUiController
 import com.google.accompanist.systemuicontroller.rememberSystemUiController
+import io.element.android.compound.tokens.sc.ElTypographyTokens
+import io.element.android.compound.tokens.sc.ExposedTypographyTokens
 import io.element.android.compound.tokens.compoundColorsDark
 import io.element.android.compound.tokens.compoundColorsLight
 import io.element.android.compound.tokens.compoundTypography
 import io.element.android.compound.tokens.generated.SemanticColors
-import io.element.android.compound.tokens.generated.TypographyTokens
 
 /**
  * Inspired from https://medium.com/@lucasyujideveloper/54cbcbde1ace
@@ -66,7 +67,10 @@ object ElementTheme {
     /**
      * Compound [Typography] tokens. In Figma, these have the `Android/font/` prefix.
      */
-    val typography: TypographyTokens = TypographyTokens
+    val typography: ExposedTypographyTokens
+        @Composable
+        @ReadOnlyComposable
+        get() = LocalTypography.current
 
     /**
      * Material 3 [Typography] tokens. In Figma, these have the `M3 Typography/` prefix.
@@ -88,6 +92,8 @@ object ElementTheme {
 /* Global variables (application level) */
 internal val LocalCompoundColors = staticCompositionLocalOf { compoundColorsLight }
 
+internal val LocalTypography = staticCompositionLocalOf { ElTypographyTokens }
+
 @Composable
 fun ElementTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
@@ -97,6 +103,7 @@ fun ElementTheme(
     materialLightColors: ColorScheme = materialColorSchemeLight,
     materialDarkColors: ColorScheme = materialColorSchemeDark,
     typography: Typography = compoundTypography,
+    typographyTokens: ExposedTypographyTokens = ElTypographyTokens,
     content: @Composable () -> Unit,
 ) {
     val systemUiController = rememberSystemUiController()
