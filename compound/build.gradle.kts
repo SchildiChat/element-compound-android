@@ -82,6 +82,7 @@ kotlin {
 }
 
 mavenPublishing {
+/*
     publishToMavenCentral(SonatypeHost.S01)
     signAllPublications()
 
@@ -115,4 +116,5 @@ mavenPublishing {
             developerConnection.set("scm:git:ssh://git@github.com/username/mylibrary.git")
         }
     }
+*/
 }
