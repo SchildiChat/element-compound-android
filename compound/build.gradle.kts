@@ -19,10 +19,12 @@ import com.vanniktech.maven.publish.SonatypeHost
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.compose.compiler)
     alias(libs.plugins.maven.publish)
     alias(libs.plugins.ksp)
     alias(libs.plugins.kover)
     alias(libs.plugins.roborazzi)
+    alias(libs.plugins.dependencycheck)
 }
 
 android {
@@ -55,10 +57,6 @@ android {
 
     buildFeatures {
         compose = true
-    }
-
-    composeOptions {
-        kotlinCompilerExtensionVersion = libs.versions.composecompiler.get()
     }
 
     packaging {
@@ -95,12 +93,17 @@ kotlin {
     jvmToolchain(17)
 }
 
+configure<org.owasp.dependencycheck.gradle.extension.DependencyCheckExtension> {
+    (properties["NVD_API_KEY"] as? String)?.let { nvd.apiKey = it }
+    nvd.delay = 1600
+}
+
 mavenPublishing {
 /*
     publishToMavenCentral(SonatypeHost.S01)
     signAllPublications()
 
-    coordinates("io.element.android", "compound-android", "0.0.7")
+    coordinates("io.element.android", "compound-android", "0.1.0")
     if (!providers.gradleProperty("mavenCentralUsername").isPresent) {
         println("No maven central provider")
     }

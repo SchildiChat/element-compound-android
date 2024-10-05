@@ -62,11 +62,11 @@ jobs:
           distribution: 'temurin' # See 'Supported distributions' for available options
           java-version: '17'
       - name: Configure gradle
-        uses: gradle/actions/setup-gradle@v3
+        uses: gradle/actions/setup-gradle@v4
         with:
           cache-read-only: ${{ github.ref != 'refs/heads/main' }}
       - name: Dependency analysis
-        run: ./gradlew dependencyCheckAnalyze $CI_GRADLE_ARG_PROPERTIES
+        run: ./gradlew :compound:dependencyCheckAnalyze $CI_GRADLE_ARG_PROPERTIES -PNVD_API_KEY="${{ secrets.NVD_API_KEY }}"
       - name: Upload dependency analysis
         if: always()
         uses: actions/upload-artifact@v4
