@@ -1,20 +1,20 @@
 [versions]
 # Project
-android_gradle_plugin = "8.7.0"
+android_gradle_plugin = "8.7.2"
 kotlin = "2.0.21"
-ksp = "2.0.21-1.0.25"
+ksp = "2.0.21-1.0.28"
 
 # AndroidX
-activity = "1.9.2"
+activity = "1.9.3"
 
 # Compose
-compose_bom = "2024.09.03"
+compose_bom = "2024.11.00"
 
 # Others
 showkase = "1.0.3"
-ui-tooling-preview-android = "1.7.3"
+ui-tooling-preview-android = "1.7.5"
 kover = "0.7.6"
-roborazzi = "1.29.0"
+roborazzi = "1.32.2"
 
 [libraries]
 # Project
@@ -23,7 +23,7 @@ kover_gradle_plugin = { module = "org.jetbrains.kotlinx:kover-gradle-plugin", ve
 
 # AndroidX
 androidx_compose_bom = { module = "androidx.compose:compose-bom", version.ref = "compose_bom" }
-androidx_compose_material3 = "androidx.compose.material3:material3:1.3.0"
+androidx_compose_material3 = "androidx.compose.material3:material3:1.3.1"
 androidx_activity_activity = { module = "androidx.activity:activity", version.ref = "activity" }
 androidx_compose_ui_test_junit = { module = "androidx.compose.ui:ui-test-junit4-android" }
 
@@ -32,7 +32,7 @@ kotlinx_collections = "org.jetbrains.kotlinx:kotlinx-collections-immutable:0.3.8
 
 # Test
 test_junit = "junit:junit:4.13.2"
-test_robolectric = "org.robolectric:robolectric:4.13"
+test_robolectric = "org.robolectric:robolectric:4.14"
 test_roborazzi = { module = "io.github.takahirom.roborazzi:roborazzi", version.ref = "roborazzi" }
 test_roborazzi_compose = { module = "io.github.takahirom.roborazzi:roborazzi-compose", version.ref = "roborazzi" }
 test_roborazzi_junit = { module = "io.github.takahirom.roborazzi:roborazzi-junit-rule", version.ref = "roborazzi" }
@@ -53,5 +53,5 @@ ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
 maven_publish = { id = "com.vanniktech.maven.publish", version = "0.30.0" }
 kover = { id = "org.jetbrains.kotlinx.kover", version.ref = "kover" }
 roborazzi = { id = "io.github.takahirom.roborazzi", version.ref = "roborazzi" }
-dependencycheck = "org.owasp.dependencycheck:10.0.4"
+dependencycheck = "org.owasp.dependencycheck:11.1.0"
 sonarqube = "org.sonarqube:5.1.0.4882"
