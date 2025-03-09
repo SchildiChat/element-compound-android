@@ -1,3 +1,10 @@
+/*
+ * Copyright 2023, 2025 New Vector Ltd.
+ *
+ * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Element-Commercial
+ * Please see LICENSE files in the repository root for full details.
+ */
+
 package io.element.android.compound.screenshot
 
 import androidx.compose.foundation.layout.Arrangement
@@ -21,7 +28,7 @@ import org.robolectric.annotation.GraphicsMode
 @GraphicsMode(GraphicsMode.Mode.NATIVE)
 class CompoundTypographyTests {
     @Test
-    @Config(sdk = [34], qualifiers = "h2048dp-xxhdpi")
+    @Config(sdk = [35], qualifiers = "h2048dp-xxhdpi")
     fun screenshots() {
         captureRoboImage(file = screenshotFile("Compound Typography.png")) {
             ElementTheme {

@@ -1,3 +1,10 @@
+/*
+ * Copyright 2023, 2025 New Vector Ltd.
+ *
+ * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Element-Commercial
+ * Please see LICENSE files in the repository root for full details.
+ */
+
 package io.element.android.compound.screenshot
 
 import androidx.compose.foundation.layout.Column
@@ -27,7 +34,7 @@ import org.robolectric.annotation.GraphicsMode
 @GraphicsMode(GraphicsMode.Mode.NATIVE)
 class LegacyColorsTests {
     @Test
-    @Config(sdk = [34], qualifiers = "xxhdpi")
+    @Config(sdk = [35], qualifiers = "xxhdpi")
     fun screenshots() {
         captureRoboImage(file = screenshotFile("Legacy Colors.png")) {
             ElementTheme {

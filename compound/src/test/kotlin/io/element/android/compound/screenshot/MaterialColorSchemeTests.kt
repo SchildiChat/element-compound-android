@@ -1,3 +1,10 @@
+/*
+ * Copyright 2023, 2025 New Vector Ltd.
+ *
+ * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Element-Commercial
+ * Please see LICENSE files in the repository root for full details.
+ */
+
 package io.element.android.compound.screenshot
 
 import androidx.compose.foundation.layout.Column
@@ -18,7 +25,6 @@ import io.element.android.compound.theme.ColorsSchemeDarkPreview
 import io.element.android.compound.theme.ColorsSchemeLightHcPreview
 import io.element.android.compound.theme.ColorsSchemeLightPreview
 import io.element.android.compound.theme.ElementTheme
-import io.element.android.compound.tokens.generated.compoundColorsHcLight
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.robolectric.annotation.Config
@@ -28,7 +34,7 @@ import org.robolectric.annotation.GraphicsMode
 @GraphicsMode(GraphicsMode.Mode.NATIVE)
 class MaterialColorSchemeTests {
     @Test
-    @Config(sdk = [34], qualifiers = "h2048dp-xhdpi")
+    @Config(sdk = [35], qualifiers = "h2048dp-xhdpi")
     fun screenshots() {
         captureRoboImage(file = screenshotFile("Material3 Colors - Light.png")) {
             ElementTheme {
