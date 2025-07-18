@@ -160,6 +160,9 @@ object CompoundIcons {
     @Composable fun DragList(): ImageVector {
         return ImageVector.vectorResource(R.drawable.ic_compound_drag_list)
     }
+    @Composable fun Earpiece(): ImageVector {
+        return ImageVector.vectorResource(R.drawable.ic_compound_earpiece)
+    }
     @Composable fun Edit(): ImageVector {
         return ImageVector.vectorResource(R.drawable.ic_compound_edit)
     }
@@ -219,6 +222,9 @@ object CompoundIcons {
     }
     @Composable fun Group(): ImageVector {
         return ImageVector.vectorResource(R.drawable.ic_compound_group)
+    }
+    @Composable fun Guest(): ImageVector {
+        return ImageVector.vectorResource(R.drawable.ic_compound_guest)
     }
     @Composable fun HeadphonesOffSolid(): ImageVector {
         return ImageVector.vectorResource(R.drawable.ic_compound_headphones_off_solid)
@@ -487,6 +493,9 @@ object CompoundIcons {
     @Composable fun ShareScreenSolid(): ImageVector {
         return ImageVector.vectorResource(R.drawable.ic_compound_share_screen_solid)
     }
+    @Composable fun Shield(): ImageVector {
+        return ImageVector.vectorResource(R.drawable.ic_compound_shield)
+    }
     @Composable fun Sidebar(): ImageVector {
         return ImageVector.vectorResource(R.drawable.ic_compound_sidebar)
     }
@@ -610,6 +619,12 @@ object CompoundIcons {
     @Composable fun Windows(): ImageVector {
         return ImageVector.vectorResource(R.drawable.ic_compound_windows)
     }
+    @Composable fun Workspace(): ImageVector {
+        return ImageVector.vectorResource(R.drawable.ic_compound_workspace)
+    }
+    @Composable fun WorkspaceSolid(): ImageVector {
+        return ImageVector.vectorResource(R.drawable.ic_compound_workspace_solid)
+    }
 
     val all @Composable get() = persistentListOf<ImageVector>(
         Admin(),
@@ -657,6 +672,7 @@ object CompoundIcons {
         DownloadIos(),
         DragGrid(),
         DragList(),
+        Earpiece(),
         Edit(),
         EditSolid(),
         Email(),
@@ -677,6 +693,7 @@ object CompoundIcons {
         Forward(),
         Grid(),
         Group(),
+        Guest(),
         HeadphonesOffSolid(),
         HeadphonesSolid(),
         Help(),
@@ -766,6 +783,7 @@ object CompoundIcons {
         ShareIos(),
         ShareScreen(),
         ShareScreenSolid(),
+        Shield(),
         Sidebar(),
         SignOut(),
         Spinner(),
@@ -807,6 +825,8 @@ object CompoundIcons {
         Warning(),
         WebBrowser(),
         Windows(),
+        Workspace(),
+        WorkspaceSolid(),
     )
 
     val allResIds get() = persistentListOf(
@@ -855,6 +875,7 @@ object CompoundIcons {
         R.drawable.ic_compound_download_ios,
         R.drawable.ic_compound_drag_grid,
         R.drawable.ic_compound_drag_list,
+        R.drawable.ic_compound_earpiece,
         R.drawable.ic_compound_edit,
         R.drawable.ic_compound_edit_solid,
         R.drawable.ic_compound_email,
@@ -875,6 +896,7 @@ object CompoundIcons {
         R.drawable.ic_compound_forward,
         R.drawable.ic_compound_grid,
         R.drawable.ic_compound_group,
+        R.drawable.ic_compound_guest,
         R.drawable.ic_compound_headphones_off_solid,
         R.drawable.ic_compound_headphones_solid,
         R.drawable.ic_compound_help,
@@ -964,6 +986,7 @@ object CompoundIcons {
         R.drawable.ic_compound_share_ios,
         R.drawable.ic_compound_share_screen,
         R.drawable.ic_compound_share_screen_solid,
+        R.drawable.ic_compound_shield,
         R.drawable.ic_compound_sidebar,
         R.drawable.ic_compound_sign_out,
         R.drawable.ic_compound_spinner,
@@ -1005,5 +1028,7 @@ object CompoundIcons {
         R.drawable.ic_compound_warning,
         R.drawable.ic_compound_web_browser,
         R.drawable.ic_compound_windows,
+        R.drawable.ic_compound_workspace,
+        R.drawable.ic_compound_workspace_solid,
     )
 }
